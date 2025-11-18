@@ -1,0 +1,132 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fafbfc;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #f8fafb;
+    border-bottom: 1px solid #ececec;
+    padding: 0.5em 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+
+nav h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1351b4;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #1351b4;
+}
+
+main {
+    max-width: 850px;
+    margin: 2em auto;
+    padding: 1em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(50, 60, 120, 0.06);
+}
+
+.section {
+    margin-bottom: 2em;
+}
+
+.section h2 {
+    font-size: 1.4rem;
+    color: #1351b4;
+    margin-bottom: 0.7em;
+    border-left: 4px solid #e6eaf1;
+    padding-left: 0.6em;
+}
+
+ul, ol {
+    margin-top: 0.3em;
+    margin-left: 1.2em;
+    font-size: 1.07em;
+}
+
+ol li, ul li {
+    margin-bottom: 0.8em;
+}
+
+a {
+    color: #1351b4;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+footer {
+    background: #f8fafb;
+    text-align: center;
+    padding: 1em 0 1.5em 0;
+    color: #444;
+    font-size: 0.98em;
+    border-top: 1px solid #ececec;
+    margin-top: 3em;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+    nav, main {
+        max-width: 98vw;
+        padding: 0 0.4em;
+    }
+    nav h1 {
+        font-size: 1.2em;
+    }
+    nav ul {
+        gap: 1em;
+    }
+    main {
+        margin: 1em auto;
+        padding: 0.5em;
+    }
+    .section h2 {
+        font-size: 1.12em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    main {
+        padding: 0.2em;
+    }
+}
