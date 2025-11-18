@@ -1,13 +1,13 @@
 :root {
-    --coffee-bg: #f7f3ed;           /* slightly deeper creamy */
-    --coffee-card: #fffaf4;         /* strong card highlight */
-    --coffee-accent: #795548;       /* deep espresso brown */
-    --coffee-dark: #3e2723;         /* rich, readable text */
-    --coffee-light: #d7ccc8;        /* soft accent */
+    --coffee-bg: #f7f3ed;
+    --coffee-card: #fffaf4;
+    --coffee-accent: #795548;
+    --coffee-dark: #3e2723;
+    --coffee-light: #d7ccc8;
     --coffee-shadow: rgba(121,85,72,0.10);
+    --pub-details: #b49e89;
 }
 
-/* Base Styles */
 body {
     font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
     background: var(--coffee-bg);
@@ -27,18 +27,20 @@ header {
 }
 
 nav {
-    max-width: 1050px;
+    max-width: 1100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1.4em;
+    position: relative;
 }
 
 .nav-brand {
     display: flex;
     align-items: center;
     gap: 0.5em;
+    user-select: none;
 }
 
 .logo {
@@ -47,10 +49,11 @@ nav {
 }
 
 .brand-name {
-    font-size: 1.35em;
+    font-size: 1.3em;
     font-weight: 700;
     color: var(--coffee-accent);
     letter-spacing: 1.5px;
+    margin-left: 0.12em;
 }
 
 nav ul {
@@ -76,6 +79,27 @@ nav ul li a:focus {
     border-bottom: 2px solid var(--coffee-accent);
 }
 
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-left: 1.2em;
+}
+.social-icons a img {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    filter: grayscale(0.3) opacity(0.75) drop-shadow(0 1px 1px #eee2d6);
+    transition: filter 0.2s, transform 0.2s;
+    vertical-align: middle;
+}
+.social-icons a:hover img {
+    filter: grayscale(0) opacity(1) drop-shadow(0 2px 6px var(--coffee-shadow));
+    transform: scale(1.18) translateY(-1.5px);
+}
+
+/* Main Layout */
 main {
     max-width: 900px;
     margin: 2.5em auto 2em auto;
@@ -93,13 +117,13 @@ main {
     padding: 2.1em 1.4em;
     margin-bottom: 2.5em;
     gap: 2em;
-    min-height: 220px;
+    min-height: 210px;
     position: relative;
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     max-width: 28vw;
     max-height: 28vw;
     object-fit: cover;
@@ -135,11 +159,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 1.1em;
+    margin-bottom: 0.4em;
 }
 .hero-btn {
     background: var(--coffee-accent);
     color: #fffaf6;
-    padding: 0.45em 1.2em;
+    padding: 0.45em 1.15em;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
@@ -199,9 +224,9 @@ li {
 }
 
 .org-icon {
-    font-size: 1.25em;
+    font-size: 1.22em;
     vertical-align: middle;
-    margin-right: 0.3em;
+    margin-right: 0.26em;
     color: var(--coffee-accent);
 }
 
@@ -211,4 +236,104 @@ li {
     margin-left: 0.3em;
 }
 .org-desc {
-    margin
+    margin-top: 0.23em;
+    font-size: 0.97em;
+    color: #6d5042;
+}
+
+/* Publications */
+.pub-list {
+    padding-left: 1.3em;
+}
+.pub-list li {
+    margin-bottom: 1.5em;
+    line-height: 1.45;
+}
+.pub-list a {
+    color: var(--coffee-dark);
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+.pub-list a:hover {
+    color: var(--coffee-accent);
+    text-decoration: none;
+}
+.pub-details {
+    display: block;
+    font-size: 0.98em;
+    color: var(--pub-details);
+    margin-top: 0.15em;
+    font-style: italic;
+    letter-spacing: 0.01em;
+}
+
+/* Awards */
+.section ul {
+    padding-left: 1.2em;
+}
+
+/* Footer */
+footer {
+    background: var(--coffee-light);
+    text-align: center;
+    padding: 1.3em 0 1.7em 0;
+    color: var(--coffee-accent);
+    font-size: 1.03em;
+    margin-top: 3em;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 -2px 8px var(--coffee-shadow);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    main {
+        max-width: 97vw;
+        padding: 0 0.4em;
+    }
+    nav {
+        max-width: 97vw;
+        padding: 0.5em 0.4em;
+    }
+}
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1em;
+        padding: 1.2em 0.5em;
+    }
+    .profile-img {
+        width: 75px;
+        height: 75px;
+        max-width: 35vw;
+        max-height: 35vw;
+    }
+    nav ul {
+        gap: 0.8em;
+        font-size: 0.98em;
+    }
+    .social-icons {
+        margin-left: 0.2em;
+    }
+}
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    main {
+        padding: 0.2em;
+    }
+    .section.card {
+        padding: 1em 0.6em;
+    }
+    .section h2 {
+        font-size: 1em;
+        padding-left: 0.35em;
+    }
+    .hero-links {
+        gap: 0.5em;
+        font-size: 0.96em;
+    }
+}
