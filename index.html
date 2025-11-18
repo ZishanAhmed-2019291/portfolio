@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zishan Ahmed – Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2212%22>🎓</text></svg>">
+    <script>
+      function refreshPage() {
+        window.location.reload();
+      }
+    </script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="nav-brand">
-                <span class="logo">&#9749;</span>
+            <div class="nav-brand" onclick="refreshPage()" style="cursor:pointer;">
+                <span class="logo">🎓</span>
                 <span class="brand-name">Zishan Ahmed</span>
             </div>
             <ul>
@@ -19,8 +25,12 @@
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#awards">Awards</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="social-icons">
+                <a href="mailto:zishanahmed2019291@gmail.com" title="Email"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email"></a>
+                <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" target="_blank" title="Google Scholar"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar"></a>
+                <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" target="_blank" title="ResearchGate"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate"></a>
+            </div>
         </nav>
     </header>
     <main>
@@ -34,6 +44,7 @@
                     <a href="mailto:zishanahmed2019291@gmail.com" class="hero-btn">Email</a>
                     <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" class="hero-btn" target="_blank">Google Scholar</a>
                     <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" class="hero-btn" target="_blank">ResearchGate</a>
+                    <a href="https://drive.google.com/file/d/13YGnFltLO8oS0xKN4FRA2SE7iWYQWFVE/view?usp=drive_link" class="hero-btn" target="_blank" download>Download CV</a>
                 </div>
             </div>
         </section>
@@ -67,7 +78,7 @@
                 </li>
                 <li>
                     <span class="org-icon">&#127979;</span>
-                    <b>Ideal School & College</b>
+                    <a href="https://iscm.edu.bd/" target="_blank"><b>Ideal School & College</b></a>
                     <br>Secondary School Certificate <span class="org-year">(2009 – 2017, GPA: 5.00)</span>
                 </li>
             </ul>
@@ -171,17 +182,6 @@
             <ul>
                 <li><b>Summa Cum Laude Award for Academic Excellence</b> – American International University-Bangladesh, Feb 2025</li>
                 <li><b>Dean's Honor List</b> – American International University-Bangladesh, Aug 2023 (4 semesters, CGPA 3.95+)</li>
-            </ul>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section card">
-            <h2>Contact</h2>
-            <ul>
-                <li><b>Email:</b> <a href="mailto:zishanahmed2019291@gmail.com">zishanahmed2019291@gmail.com</a></li>
-                <li><b>Alternate Email:</b> <a href="mailto:zishan.ahmed@studenti.unitn.it">zishan.ahmed@studenti.unitn.it</a></li>
-                <li><b>Google Scholar:</b> <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" target="_blank">Profile</a></li>
-                <li><b>ResearchGate:</b> <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" target="_blank">Profile</a></li>
             </ul>
         </section>
     </main>
