@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zishan Ahmed – Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2212%22>🎓</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='5' y='26' font-size='28' font-family='Segoe UI,Arial' fill='%23795548'>Z</text></svg>">
     <script>
       function refreshPage() {
         window.location.reload();
@@ -15,8 +15,13 @@
 <body>
     <header>
         <nav>
-            <div class="nav-brand" onclick="refreshPage()" style="cursor:pointer;">
-                <span class="logo">🎓</span>
+            <div class="nav-brand" onclick="refreshPage()" title="Refresh page" style="cursor:pointer;">
+                <span class="z-logo" aria-label="Z Logo">
+                    <!-- Inline SVG for minimal Z -->
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                        <text x="7" y="25" font-size="22" font-family="Segoe UI, Arial" fill="#795548">Z</text>
+                    </svg>
+                </span>
                 <span class="brand-name">Zishan Ahmed</span>
             </div>
             <ul>
@@ -26,11 +31,6 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#awards">Awards</a></li>
             </ul>
-            <div class="social-icons">
-                <a href="mailto:zishanahmed2019291@gmail.com" title="Email"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email"></a>
-                <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" target="_blank" title="Google Scholar"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar"></a>
-                <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" target="_blank" title="ResearchGate"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate"></a>
-            </div>
         </nav>
     </header>
     <main>
@@ -39,12 +39,30 @@
             <img src="profile.jpg" alt="Zishan Ahmed" class="profile-img">
             <div class="hero-content">
                 <h1>Zishan Ahmed</h1>
-                <p class="tagline">Machine Learning | NLP | Generative AI Researcher</p>
-                <div class="hero-links">
-                    <a href="mailto:zishanahmed2019291@gmail.com" class="hero-btn">Email</a>
-                    <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" class="hero-btn" target="_blank">Google Scholar</a>
-                    <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" class="hero-btn" target="_blank">ResearchGate</a>
-                    <a href="https://drive.google.com/file/d/13YGnFltLO8oS0xKN4FRA2SE7iWYQWFVE/view?usp=drive_link" class="hero-btn" target="_blank" download>Download CV</a>
+                <p class="tagline">Welcome to my portfolio</p>
+                <div class="hero-links-main">
+                    <a href="mailto:zishanahmed2019291@gmail.com" class="hero-social big" title="Email">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email">
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" target="_blank" class="hero-social big" title="Google Scholar">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" target="_blank" class="hero-social big" title="ResearchGate">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate">
+                    </a>
+                </div>
+                <div class="hero-links-secondary">
+                    <a href="https://www.facebook.com/zishan.ahmed.9803/" target="_blank" class="hero-social small" title="Facebook">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/zessi10" target="_blank" class="hero-social small" title="Instagram">
+                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+                    </a>
+                </div>
+                <div style="margin-top:1.2em;">
+                    <a href="https://drive.google.com/file/d/13YGnFltLO8oS0xKN4FRA2SE7iWYQWFVE/view?usp=drive_link" class="hero-btn" target="_blank" download>
+                        Download CV
+                    </a>
                 </div>
             </div>
         </section>
@@ -62,22 +80,18 @@
             <h2>Education</h2>
             <ul class="org-list">
                 <li>
-                    <span class="org-icon">&#127891;</span>
                     <a href="https://www.unitn.it/en" target="_blank"><b>University of Trento</b></a>
                     <br>Master's in Artificial Intelligence Systems <span class="org-year">(Sep 2025 – Ongoing)</span>
                 </li>
                 <li>
-                    <span class="org-icon">&#127891;</span>
                     <a href="https://www.aiub.edu/" target="_blank"><b>American International University-Bangladesh</b></a>
                     <br>Bachelor in Computer Science and Engineering <span class="org-year">(Jan 2020 – Mar 2024, CGPA: 3.96)</span>
                 </li>
                 <li>
-                    <span class="org-icon">&#127979;</span>
                     <a href="https://dhakacollege.edu.bd/" target="_blank"><b>Dhaka College</b></a>
                     <br>Higher Secondary School Certificate <span class="org-year">(Aug 2017 – Dec 2019, GPA: 5.00)</span>
                 </li>
                 <li>
-                    <span class="org-icon">&#127979;</span>
                     <a href="https://iscm.edu.bd/" target="_blank"><b>Ideal School & College</b></a>
                     <br>Secondary School Certificate <span class="org-year">(2009 – 2017, GPA: 5.00)</span>
                 </li>
@@ -89,7 +103,6 @@
             <h2>Work Experience</h2>
             <ul class="org-list">
                 <li>
-                    <span class="org-icon">&#128188;</span>
                     <a href="https://elitelab.ai/" target="_blank"><b>ELITE Research Lab PLC</b></a>
                     <br>Lead Researcher <span class="org-year">(Feb 2024 – Current)</span>
                     <div class="org-desc">
@@ -97,7 +110,6 @@
                     </div>
                 </li>
                 <li>
-                    <span class="org-icon">&#128188;</span>
                     <a href="https://www.uttara.ac.bd/" target="_blank"><b>Uttara University</b></a>
                     <br>Adjunct Lecturer <span class="org-year">(Aug 2024 – Sep 2025)</span>
                     <div class="org-desc">
@@ -105,7 +117,6 @@
                     </div>
                 </li>
                 <li>
-                    <span class="org-icon">&#128188;</span>
                     <a href="https://www.aiub.edu/" target="_blank"><b>American International University-Bangladesh</b></a>
                     <br>Research Assistant <span class="org-year">(Aug 2023 – Jan 2024)</span>
                     <div class="org-desc">
@@ -188,5 +199,16 @@
     <footer>
         <p>&copy; 2025 Zishan Ahmed. All rights reserved.</p>
     </footer>
+<script>
+  // Publication hover highlight
+  document.querySelectorAll('.pub-list li').forEach(function(li) {
+    li.addEventListener('mouseenter', function() {
+      li.classList.add('pub-hover');
+    });
+    li.addEventListener('mouseleave', function() {
+      li.classList.remove('pub-hover');
+    });
+  });
+</script>
 </body>
 </html>
