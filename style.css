@@ -6,6 +6,8 @@
     --coffee-light: #d7ccc8;
     --coffee-shadow: rgba(121,85,72,0.10);
     --pub-details: #b49e89;
+    --pub-hover: #ede4db;
+    --secondary-icon: #b49e89;
 }
 
 body {
@@ -16,7 +18,6 @@ body {
     padding: 0;
 }
 
-/* Header & Nav */
 header {
     background: var(--coffee-card);
     border-bottom: 2px solid var(--coffee-light);
@@ -39,17 +40,24 @@ nav {
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.4em;
     user-select: none;
 }
-
-.logo {
-    font-size: 1.7em;
-    color: var(--coffee-accent);
+.z-logo {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.z-logo svg {
+    width: 34px;
+    height: 34px;
+    display: block;
 }
 
 .brand-name {
-    font-size: 1.3em;
+    font-size: 1.22em;
     font-weight: 700;
     color: var(--coffee-accent);
     letter-spacing: 1.5px;
@@ -79,24 +87,60 @@ nav ul li a:focus {
     border-bottom: 2px solid var(--coffee-accent);
 }
 
-/* Social Icons */
-.social-icons {
+/* Main Social Icons (big) */
+.hero-links-main {
     display: flex;
-    gap: 1em;
+    flex-direction: row;
     align-items: center;
-    margin-left: 1.2em;
+    gap: 1.6em;
+    margin-bottom: 0.7em;
+    margin-top: 1em;
 }
-.social-icons a img {
-    width: 22px;
-    height: 22px;
-    display: inline-block;
-    filter: grayscale(0.3) opacity(0.75) drop-shadow(0 1px 1px #eee2d6);
-    transition: filter 0.2s, transform 0.2s;
-    vertical-align: middle;
+.hero-social.big img {
+    width: 38px;
+    height: 38px;
+    filter: none;
+    background: #fff;
+    border-radius: 50%;
+    padding: 7px;
+    box-shadow: 0 2px 8px var(--coffee-shadow);
+    border: 1.5px solid var(--coffee-accent);
+    transition: border 0.18s, transform 0.17s, filter 0.18s;
 }
-.social-icons a:hover img {
-    filter: grayscale(0) opacity(1) drop-shadow(0 2px 6px var(--coffee-shadow));
-    transform: scale(1.18) translateY(-1.5px);
+.hero-social.big:hover img,
+.hero-social.big:focus img {
+    border-color: var(--coffee-dark);
+    filter: brightness(0.93) saturate(1.18);
+    transform: scale(1.09) translateY(-2px);
+}
+
+/* Secondary Social Icons (small) */
+.hero-links-secondary {
+    display: flex;
+    flex-direction: row;
+    gap: 1.1em;
+    margin-bottom: 0.7em;
+    margin-top: 0.2em;
+    opacity: 0.8;
+}
+.hero-social.small img {
+    width: 25px;
+    height: 25px;
+    filter: grayscale(0.4) opacity(0.8);
+    border-radius: 50%;
+    padding: 4px;
+    background: #fcf7f1;
+    box-shadow: 0 1px 4px var(--coffee-shadow);
+    border: 1px solid var(--secondary-icon);
+    transition: border 0.16s, transform 0.14s, filter 0.16s;
+}
+.hero-social.small:hover img,
+.hero-social.small:focus img {
+    filter: none;
+    border: 1.5px solid var(--coffee-accent);
+    background: #ede4db;
+    transform: scale(1.13) translateY(-1px);
+    opacity: 1;
 }
 
 /* Main Layout */
@@ -106,7 +150,6 @@ main {
     padding: 0 1em;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     flex-wrap: wrap;
@@ -148,23 +191,17 @@ main {
 }
 
 .tagline {
-    font-size: 1.13em;
+    font-size: 1.17em;
     color: var(--coffee-accent);
-    margin-bottom: 1.2em;
+    margin-bottom: 0.8em;
     font-weight: 500;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
 }
 
-.hero-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.1em;
-    margin-bottom: 0.4em;
-}
 .hero-btn {
     background: var(--coffee-accent);
     color: #fffaf6;
-    padding: 0.45em 1.15em;
+    padding: 0.45em 1.18em;
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
@@ -173,13 +210,13 @@ main {
     box-shadow: 0 2px 8px var(--coffee-shadow);
     transition: background 0.18s, transform 0.18s;
     display: inline-block;
+    margin-top: 0.5em;
 }
 .hero-btn:hover, .hero-btn:focus {
     background: #4e342e;
     transform: translateY(-2px) scale(1.03);
 }
 
-/* Section Cards */
 .section.card {
     background: var(--coffee-card);
     border-radius: 14px;
@@ -207,7 +244,6 @@ li {
     margin-bottom: 1.04em;
 }
 
-/* Organizations & Experience */
 .org-list {
     padding-left: 0;
     list-style: none;
@@ -218,16 +254,8 @@ li {
     padding-bottom: 0.8em;
     border-bottom: 1px solid #e6ded2;
 }
-
 .org-list li:last-child {
     border-bottom: none;
-}
-
-.org-icon {
-    font-size: 1.22em;
-    vertical-align: middle;
-    margin-right: 0.26em;
-    color: var(--coffee-accent);
 }
 
 .org-year {
@@ -241,19 +269,27 @@ li {
     color: #6d5042;
 }
 
-/* Publications */
 .pub-list {
     padding-left: 1.3em;
 }
 .pub-list li {
     margin-bottom: 1.5em;
     line-height: 1.45;
+    border-radius: 9px;
+    transition: background 0.18s, transform 0.13s, box-shadow 0.13s;
+    cursor: pointer;
 }
+.pub-list li.pub-hover, .pub-list li:hover {
+    background: var(--pub-hover);
+    transform: scale(1.017);
+    box-shadow: 0 2px 8px var(--coffee-shadow);
+}
+
 .pub-list a {
     color: var(--coffee-dark);
     font-weight: 600;
     text-decoration: underline;
-    transition: color 0.2s;
+    transition: color 0.18s;
 }
 .pub-list a:hover {
     color: var(--coffee-accent);
@@ -313,8 +349,13 @@ footer {
         gap: 0.8em;
         font-size: 0.98em;
     }
-    .social-icons {
-        margin-left: 0.2em;
+    .z-logo {
+        width: 28px;
+        height: 28px;
+    }
+    .hero-links-main, .hero-links-secondary {
+        justify-content: center;
+        gap: 0.8em;
     }
 }
 @media (max-width: 480px) {
@@ -332,8 +373,8 @@ footer {
         font-size: 1em;
         padding-left: 0.35em;
     }
-    .hero-links {
+    .hero-links-main, .hero-links-secondary {
         gap: 0.5em;
-        font-size: 0.96em;
+        font-size: 0.97em;
     }
 }
