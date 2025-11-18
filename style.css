@@ -1,11 +1,10 @@
-/* Coffee-Themed Palette */
 :root {
-    --coffee-bg: #f9f6f2;
-    --coffee-card: #fffaf6;
-    --coffee-accent: #a47149;
-    --coffee-dark: #4e342e;
-    --coffee-light: #e5d6c4;
-    --coffee-shadow: rgba(164,113,73,0.09);
+    --coffee-bg: #f7f3ed;           /* slightly deeper creamy */
+    --coffee-card: #fffaf4;         /* strong card highlight */
+    --coffee-accent: #795548;       /* deep espresso brown */
+    --coffee-dark: #3e2723;         /* rich, readable text */
+    --coffee-light: #d7ccc8;        /* soft accent */
+    --coffee-shadow: rgba(121,85,72,0.10);
 }
 
 /* Base Styles */
@@ -89,24 +88,27 @@ main {
     flex-wrap: wrap;
     align-items: center;
     background: var(--coffee-card);
-    border-radius: 18px;
-    box-shadow: 0 6px 32px var(--coffee-shadow);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px var(--coffee-shadow);
     padding: 2.1em 1.4em;
     margin-bottom: 2.5em;
     gap: 2em;
-    min-height: 270px;
+    min-height: 220px;
     position: relative;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    max-width: 28vw;
+    max-height: 28vw;
     object-fit: cover;
     border-radius: 100px;
-    border: 3.5px solid var(--coffee-accent);
-    box-shadow: 0 2px 16px var(--coffee-shadow);
+    border: 3px solid var(--coffee-accent);
+    box-shadow: 0 2px 8px var(--coffee-shadow);
     background: #f3ebe6;
     margin-right: 2em;
+    margin-bottom: 0.5em;
 }
 
 .hero-content {
@@ -148,15 +150,15 @@ main {
     display: inline-block;
 }
 .hero-btn:hover, .hero-btn:focus {
-    background: #825f41;
+    background: #4e342e;
     transform: translateY(-2px) scale(1.03);
 }
 
 /* Section Cards */
 .section.card {
     background: var(--coffee-card);
-    border-radius: 13px;
-    box-shadow: 0 2px 12px var(--coffee-shadow);
+    border-radius: 14px;
+    box-shadow: 0 4px 16px var(--coffee-shadow);
     padding: 1.5em 1.2em;
     margin-bottom: 2em;
 }
@@ -189,7 +191,7 @@ li {
 .org-list li {
     margin-bottom: 1.25em;
     padding-bottom: 0.8em;
-    border-bottom: 1px solid #f2e8df;
+    border-bottom: 1px solid #e6ded2;
 }
 
 .org-list li:last-child {
@@ -209,108 +211,4 @@ li {
     margin-left: 0.3em;
 }
 .org-desc {
-    margin-top: 0.23em;
-    font-size: 0.97em;
-    color: #6d5042;
-}
-
-/* Publications */
-.pub-list {
-    padding-left: 1.3em;
-}
-.pub-list li {
-    margin-bottom: 1.5em;
-    line-height: 1.45;
-}
-.pub-list a {
-    color: var(--coffee-dark);
-    font-weight: 600;
-    text-decoration: underline;
-    transition: color 0.2s;
-}
-.pub-list a:hover {
-    color: var(--coffee-accent);
-    text-decoration: none;
-}
-.pub-details {
-    display: block;
-    font-size: 0.98em;
-    color: #836043;
-    margin-top: 0.15em;
-}
-
-/* Awards */
-.section ul {
-    padding-left: 1.2em;
-}
-
-/* Contact */
-#contact ul {
-    list-style: none;
-    padding: 0;
-}
-#contact li {
-    margin-bottom: 0.7em;
-}
-#contact a {
-    color: var(--coffee-accent);
-    text-decoration: underline;
-}
-#contact a:hover {
-    color: var(--coffee-dark);
-}
-
-/* Footer */
-footer {
-    background: var(--coffee-light);
-    text-align: center;
-    padding: 1.3em 0 1.7em 0;
-    color: var(--coffee-accent);
-    font-size: 1.03em;
-    margin-top: 3em;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 -2px 8px var(--coffee-shadow);
-}
-
-/* Responsive Design */
-@media (max-width: 900px) {
-    main {
-        max-width: 97vw;
-        padding: 0 0.4em;
-    }
-    nav {
-        max-width: 97vw;
-        padding: 0.5em 0.4em;
-    }
-}
-@media (max-width: 700px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 1em;
-        padding: 1.2em 0.5em;
-    }
-    .profile-img {
-        margin: 0 auto 1em auto;
-    }
-    nav ul {
-        gap: 0.8em;
-        font-size: 0.98em;
-    }
-}
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-        gap: 0.5em;
-    }
-    main {
-        padding: 0.2em;
-    }
-    .section.card {
-        padding: 1em 0.6em;
-    }
-    .section h2 {
-        font-size: 1em;
-        padding-left: 0.35em;
-    }
-}
+    margin
