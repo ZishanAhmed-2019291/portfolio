@@ -14,7 +14,6 @@
     --pub-glow-hover: 0 0 30px 7px #ffd699bb, 0 0 0 #fff;
 }
 
-/* --- PAGE CONTAINER --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -171,7 +170,6 @@ nav ul li a:focus {
     font-weight: 500;
     letter-spacing: 0.01em;
 }
-
 .hero-links-main {
     display: flex;
     align-items: center;
@@ -181,33 +179,32 @@ nav ul li a:focus {
     margin-top: 0.7em;
 }
 .hero-social img {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    border-radius: 7px;
     background: #fff;
     box-shadow: 0 2px 7px #f3e5cb55;
-    border: 1.3px solid #e0dacb;
-    padding: 3.5px;
+    border: 2px solid #e0dacb;
+    padding: 7px;
     filter: grayscale(0.08) opacity(0.96);
     transition: box-shadow 0.13s, border 0.12s, filter 0.14s, transform 0.12s;
 }
 .hero-social:hover img,
 .hero-social:focus img {
-    box-shadow: 0 0 12px #ffd699bb, 0 0 0 #fff;
+    box-shadow: 0 0 18px #ffd699bb, 0 0 0 #fff;
     border-color: var(--coffee-accent);
     filter: none;
-    transform: scale(1.07);
+    transform: scale(1.11);
 }
 .manual-email {
-    font-size: 1.01em;
+    font-size: 0.91em;
     color: #846e59;
     font-family: inherit;
-    margin: 0 0.7em 0 0.1em;
+    margin: 0 0.4em 0 0.1em;
     user-select: text;
     word-break: break-all;
-    font-weight: 500;
+    font-weight: 400;
 }
-
 .hero-btn {
     background: var(--coffee-accent);
     color: #fffaf6;
@@ -237,6 +234,11 @@ nav ul li a:focus {
     margin-bottom: 2em;
 }
 
+/* --- ABOUT ME --- */
+#about p {
+    text-align: justify;
+}
+
 /* CARD LIST for Education/Experience */
 .card-list {
     display: flex;
@@ -260,16 +262,28 @@ nav ul li a:focus {
     transform: translateY(-2px) scale(1.017);
     z-index: 1;
 }
+/* Bigger logos in Education/Work */
 .inst-logo {
-    width: 46px;
-    height: 46px;
-    border-radius: 8px;
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
     background: #fff;
     object-fit: contain;
     box-shadow: 0 1px 6px #f3e5cb66;
-    border: 1.2px solid #e0dacb;
-    margin-right: 0.8em;
+    border: 1.7px solid #e0dacb;
+    margin-right: 1em;
     flex-shrink: 0;
+}
+/* Chocolate links in Education/Experience */
+.inst-card a {
+    color: var(--coffee-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.14s;
+}
+.inst-card a:hover, .inst-card a:focus {
+    color: #4e342e;
+    text-decoration: underline;
 }
 
 /* --- PUBLICATIONS: CARD GLOW --- */
@@ -327,7 +341,21 @@ nav ul li a:focus {
     padding-left: 1.1em;
 }
 
-/* Socials Section (BOTTOM, smaller icons) */
+/* --- ACHIEVEMENTS SECTION --- */
+#achievements ul {
+    padding-left: 1.1em;
+    margin: 0.7em 0 0 0;
+}
+#achievements li {
+    margin-bottom: 0.5em;
+    font-size: 1.06em;
+    color: var(--coffee-dark);
+}
+#achievements h2 {
+    margin-bottom: 0.5em;
+}
+
+/* Socials Section (BOTTOM, bigger icons) */
 .socials-section {
     background: var(--coffee-card);
     margin: 2em auto 0 auto;
@@ -352,14 +380,14 @@ nav ul li a:focus {
     margin-top: 0.2em;
 }
 .socials-row a img {
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 2px 6px #edd4b8bb;
     filter: grayscale(0.15) opacity(0.93);
     transition: filter 0.15s, box-shadow 0.16s, transform 0.13s;
-    padding: 3px;
+    padding: 5px;
 }
 .socials-row a:hover img, .socials-row a:focus img {
     filter: none;
@@ -371,10 +399,10 @@ nav ul li a:focus {
 footer {
     background: var(--coffee-light);
     text-align: center;
-    padding: 1.1em 0 1.4em 0;
+    padding: 0.5em 0 0.7em 0;
     color: var(--coffee-accent);
-    font-size: 1.01em;
-    margin-top: 3em;
+    font-size: 0.95em;
+    margin-top: 2em;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 -2px 8px var(--coffee-shadow);
     font-family: inherit;
@@ -435,11 +463,12 @@ footer {
         height: 28px;
     }
     .hero-links-main {
-        gap: 0.8em;
+        gap: 0.7em;
+        justify-content: center;
     }
     .inst-logo {
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
     }
     .inst-card {
         padding: 0.8em 0.7em;
@@ -471,11 +500,11 @@ footer {
         padding-left: 0.35em;
     }
     .inst-logo {
-        width: 26px;
-        height: 26px;
+        width: 32px;
+        height: 32px;
     }
     .hero-links-main {
-        gap: 0.45em;
+        gap: 0.38em;
         font-size: 0.96em;
     }
     .card-list {
