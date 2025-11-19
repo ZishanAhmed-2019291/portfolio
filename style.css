@@ -10,6 +10,16 @@
     --pub-hover: #ede4db;
     --secondary-icon: #b49e89;
     --card-glow: 0 0 18px 0 #ffd69999, 0 0 0 #fff;
+    --pub-glow: 0 0 24px 2px #ffd69999, 0 0 0 #fff;
+    --pub-glow-hover: 0 0 30px 7px #ffd699bb, 0 0 0 #fff;
+}
+
+/* --- PAGE CONTAINER --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2.5vw;
+    box-sizing: border-box;
 }
 
 body {
@@ -29,6 +39,59 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+/* --- TOP SOCIALS BAR --- */
+.top-socials-bar {
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+    padding: 0.7em 0 0.7em 0.3em;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--coffee-light);
+    margin-bottom: 0.8em;
+    background: var(--coffee-card);
+    position: relative;
+}
+.top-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 7px #f3e5cb55;
+    border: 1.3px solid #e0dacb;
+    width: 36px;
+    height: 36px;
+    transition: box-shadow 0.16s, transform 0.14s, border 0.14s, filter 0.13s;
+    margin-right: 0;
+}
+.top-social img {
+    width: 22px;
+    height: 22px;
+    display: block;
+    filter: grayscale(0.08) opacity(0.96);
+}
+.top-social.email img {
+    filter: none;
+}
+.top-social:hover,
+.top-social:focus {
+    box-shadow: 0 0 14px #ffd699bb, 0 0 0 #fff;
+    border-color: var(--coffee-accent);
+    transform: translateY(-2px) scale(1.08);
+    filter: none;
+}
+.top-social-email {
+    font-size: 1.07em;
+    color: #846e59;
+    font-family: inherit;
+    margin: 0 1.1em 0 0.23em;
+    user-select: text;
+    letter-spacing: 0.01em;
+    word-break: break-all;
+    font-weight: 500;
 }
 
 nav {
@@ -245,14 +308,62 @@ nav ul li a:focus {
     flex-shrink: 0;
 }
 
-/* Publications block (unchanged for brevity; see your previous CSS for .pub-list, .pub-meta, .pub-details, etc.) */
+/* --- PUBLICATIONS: CARD GLOW --- */
+.pub-list li {
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: var(--pub-glow);
+    border: 1.6px solid #f3e1c7;
+    margin-bottom: 1.25em;
+    padding: 1.1em 1.2em;
+    transition: box-shadow 0.26s, border 0.19s, transform 0.17s, background 0.18s;
+    position: relative;
+    list-style: decimal inside;
+}
+.pub-list li:last-child { margin-bottom: 0; }
+.pub-list li.pub-hover,
+.pub-list li:hover,
+.pub-list li:focus-within {
+    background: var(--pub-hover);
+    box-shadow: var(--pub-glow-hover);
+    border-color: #ffdaab;
+    transform: translateY(-2px) scale(1.014);
+    z-index: 1;
+}
+.pub-list a {
+    font-weight: 600;
+    color: var(--coffee-accent);
+    text-decoration: none;
+    transition: color 0.16s;
+}
+.pub-list a:hover, .pub-list a:focus {
+    color: var(--coffee-dark);
+    text-decoration: underline;
+}
+.pub-meta {
+    font-size: 0.97em;
+    color: var(--pub-meta);
+    margin-top: 0.18em;
+}
+.pub-details {
+    display: block;
+    color: #ab8864;
+    font-size: 0.93em;
+    margin-top: 0.06em;
+    letter-spacing: 0.01em;
+    background: var(--pub-details);
+    padding: 0.11em 0.5em;
+    border-radius: 8px;
+    margin-left: -0.4em;
+    width: fit-content;
+}
 
 /* Awards */
 .section ul {
     padding-left: 1.1em;
 }
 
-/* Socials Section */
+/* Socials Section (BOTTOM) */
 .socials-section {
     background: var(--coffee-card);
     margin: 2em auto 0 auto;
@@ -306,7 +417,21 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1100px) {
+    .container {
+        max-width: 97vw;
+        padding: 0 1vw;
+    }
+    nav {
+        max-width: 97vw;
+        padding: 0.5em 0.4em;
+    }
+}
+
 @media (max-width: 900px) {
+    .container {
+        padding: 0 0.4em;
+    }
     main {
         max-width: 97vw;
         padding: 0 0.4em;
@@ -319,7 +444,20 @@ footer {
         margin-left: 0.8em;
     }
 }
+
 @media (max-width: 700px) {
+    .container {
+        padding: 0 0.2em;
+    }
+    .top-socials-bar {
+        flex-wrap: wrap;
+        gap: 0.5em;
+        padding: 0.8em 0.3em 0.6em 0.3em;
+    }
+    .top-social-email {
+        font-size: 0.98em;
+        margin-right: 0.6em;
+    }
     .hero {
         flex-direction: column;
         text-align: center;
@@ -354,6 +492,9 @@ footer {
     }
 }
 @media (max-width: 480px) {
+    .container {
+        padding: 0 0.1em;
+    }
     nav {
         flex-direction: column;
         gap: 0.5em;
