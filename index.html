@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zishan Ahmed – Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Use Inter font from Google Fonts if available -->
+    <!-- Inter font for clean look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='5' y='26' font-size='28' font-family='Segoe UI,Arial' fill='%23795548'>Z</text></svg>">
     <script>
-      function refreshPage() {
-        window.location.reload();
-      }
+      function refreshPage() { window.location.reload(); }
     </script>
 </head>
 <body>
@@ -34,6 +32,9 @@
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#awards">Awards</a></li>
             </ul>
+            <a href="https://www.linkedin.com/in/zishan-ahmed-b403b720b/" target="_blank" class="linkedin-top" title="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn">
+            </a>
         </nav>
     </header>
     <main>
@@ -47,23 +48,7 @@
                     <a href="mailto:zishanahmed2019291@gmail.com" class="hero-social big" title="Email">
                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email">
                     </a>
-                    <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" target="_blank" class="hero-social big" title="Google Scholar">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar">
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" target="_blank" class="hero-social big" title="ResearchGate">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate">
-                    </a>
-                    <a href="https://github.com/ZishanAhmed-2019291" target="_blank" class="hero-social big" title="GitHub">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub">
-                    </a>
-                </div>
-                <div class="hero-links-secondary">
-                    <a href="https://www.facebook.com/zishan.ahmed.9803/" target="_blank" class="hero-social small" title="Facebook">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com/zessi10" target="_blank" class="hero-social small" title="Instagram">
-                        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
-                    </a>
+                    <span class="manual-email">zishanahmed2019291@gmail.com</span>
                 </div>
                 <div style="margin-top:1.2em;">
                     <a href="https://drive.google.com/file/d/13YGnFltLO8oS0xKN4FRA2SE7iWYQWFVE/view?usp=drive_link" class="hero-btn" target="_blank" download>
@@ -84,52 +69,73 @@
         <!-- EDUCATION -->
         <section id="education" class="section card">
             <h2>Education</h2>
-            <ul class="org-list">
-                <li>
-                    <a href="https://www.unitn.it/en" target="_blank"><b>University of Trento</b></a>
-                    <br>Master's in Artificial Intelligence Systems <span class="org-year">(Sep 2025 – Ongoing)</span>
-                </li>
-                <li>
-                    <a href="https://www.aiub.edu/" target="_blank"><b>American International University-Bangladesh</b></a>
-                    <br>Bachelor in Computer Science and Engineering <span class="org-year">(Jan 2020 – Mar 2024, CGPA: 3.96)</span>
-                </li>
-                <li>
-                    <a href="https://dhakacollege.edu.bd/" target="_blank"><b>Dhaka College</b></a>
-                    <br>Higher Secondary School Certificate <span class="org-year">(Aug 2017 – Dec 2019, GPA: 5.00)</span>
-                </li>
-                <li>
-                    <a href="https://iscm.edu.bd/" target="_blank"><b>Ideal School & College</b></a>
-                    <br>Secondary School Certificate <span class="org-year">(2009 – 2017, GPA: 5.00)</span>
-                </li>
-            </ul>
+            <div class="card-list">
+                <div class="inst-card">
+                    <img src="UniTN.jpg" class="inst-logo" alt="University of Trento">
+                    <div>
+                        <a href="https://www.unitn.it/en" target="_blank"><b>University of Trento</b></a>
+                        <br>Master's in Artificial Intelligence Systems <span class="org-year">(Sep 2025 – Ongoing)</span>
+                    </div>
+                </div>
+                <div class="inst-card">
+                    <img src="AIUB.jpg" class="inst-logo" alt="AIUB">
+                    <div>
+                        <a href="https://www.aiub.edu/" target="_blank"><b>American International University-Bangladesh</b></a>
+                        <br>Bachelor in Computer Science and Engineering <span class="org-year">(Jan 2020 – Mar 2024, CGPA: 3.96)</span>
+                    </div>
+                </div>
+                <div class="inst-card">
+                    <img src="DhakaCollege.jpg" class="inst-logo" alt="Dhaka College">
+                    <div>
+                        <a href="https://dhakacollege.edu.bd/" target="_blank"><b>Dhaka College</b></a>
+                        <br>Higher Secondary School Certificate <span class="org-year">(Aug 2017 – Dec 2019, GPA: 5.00)</span>
+                    </div>
+                </div>
+                <div class="inst-card">
+                    <img src="ISC.jpg" class="inst-logo" alt="Ideal School & College">
+                    <div>
+                        <a href="https://iscm.edu.bd/" target="_blank"><b>Ideal School & College</b></a>
+                        <br>Secondary School Certificate <span class="org-year">(2009 – 2017, GPA: 5.00)</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- EXPERIENCE -->
         <section id="experience" class="section card">
             <h2>Work Experience</h2>
-            <ul class="org-list">
-                <li>
-                    <a href="https://elitelab.ai/" target="_blank"><b>ELITE Research Lab PLC</b></a>
-                    <br>Lead Researcher <span class="org-year">(Feb 2024 – Current)</span>
-                    <div class="org-desc">
-                        Research on NLP and LLMs, developing ML models, publications, academic and AI-driven projects.
+            <div class="card-list">
+                <div class="inst-card">
+                    <img src="ELITE.jpg" class="inst-logo" alt="ELITE Research Lab">
+                    <div>
+                        <a href="https://elitelab.ai/" target="_blank"><b>ELITE Research Lab PLC</b></a>
+                        <br>Lead Researcher <span class="org-year">(Feb 2024 – Current)</span>
+                        <div class="org-desc">
+                            Research on NLP and LLMs, developing ML models, publications, academic and AI-driven projects.
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <a href="https://www.uttara.ac.bd/" target="_blank"><b>Uttara University</b></a>
-                    <br>Adjunct Lecturer <span class="org-year">(Aug 2024 – Sep 2025)</span>
-                    <div class="org-desc">
-                        Lectures, course material, assessment, mentoring, curriculum enhancement, integrating technology for learning.
+                </div>
+                <div class="inst-card">
+                    <img src="UU.jpg" class="inst-logo" alt="Uttara University">
+                    <div>
+                        <a href="https://www.uttara.ac.bd/" target="_blank"><b>Uttara University</b></a>
+                        <br>Adjunct Lecturer <span class="org-year">(Aug 2024 – Sep 2025)</span>
+                        <div class="org-desc">
+                            Lectures, course material, assessment, mentoring, curriculum enhancement, integrating technology for learning.
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <a href="https://www.aiub.edu/" target="_blank"><b>American International University-Bangladesh</b></a>
-                    <br>Research Assistant <span class="org-year">(Aug 2023 – Jan 2024)</span>
-                    <div class="org-desc">
-                        Projects on ML and NLP, data analysis, model development, academic publications.
+                </div>
+                <div class="inst-card">
+                    <img src="AIUB.jpg" class="inst-logo" alt="AIUB">
+                    <div>
+                        <a href="https://www.aiub.edu/" target="_blank"><b>American International University-Bangladesh</b></a>
+                        <br>Research Assistant <span class="org-year">(Aug 2023 – Jan 2024)</span>
+                        <div class="org-desc">
+                            Projects on ML and NLP, data analysis, model development, academic publications.
+                        </div>
                     </div>
-                </li>
-            </ul>
+                </div>
+            </div>
         </section>
 
         <!-- PUBLICATIONS -->
@@ -271,6 +277,20 @@
                 <li><b>Summa Cum Laude Award for Academic Excellence</b> – American International University-Bangladesh, Feb 2025</li>
                 <li><b>Dean's Honor List</b> – American International University-Bangladesh, Aug 2023 (4 semesters, CGPA 3.95+)</li>
             </ul>
+        </section>
+        
+        <!-- SOCIALS SECTION -->
+        <section class="socials-section">
+            <h2>Socials</h2>
+            <div class="socials-row">
+                <a href="mailto:zishanahmed2019291@gmail.com" title="Email" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/maildotru.svg" alt="Email"></a>
+                <a href="https://scholar.google.com/citations?user=z1huSOkAAAAJ&hl=en" target="_blank" title="Google Scholar"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlescholar.svg" alt="Google Scholar"></a>
+                <a href="https://www.researchgate.net/profile/Zishan-Ahmed-5" target="_blank" title="ResearchGate"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/researchgate.svg" alt="ResearchGate"></a>
+                <a href="https://github.com/zessi10" target="_blank" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
+                <a href="https://www.facebook.com/zishan.ahmed.9803/" target="_blank" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/zessi10" target="_blank" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/zishan-ahmed-b403b720b/" target="_blank" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+            </div>
         </section>
     </main>
     <footer>
