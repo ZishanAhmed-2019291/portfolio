@@ -147,24 +147,6 @@ nav ul li a:focus {
     background: #f3ebe6;
     margin-right: 0.5em;
 }
-.profile-img-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-.profile-img-wrapper::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    right: 0;
-    height: 12px;
-    background: linear-gradient(to top, rgba(121, 85, 72, 0.18), transparent);
-    border-radius: 50%;
-    filter: blur(2px);
-    opacity: 0.6;
-    pointer-events: none;
-}
 
 .hero-content {
     flex: 1;
